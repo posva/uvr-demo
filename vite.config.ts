@@ -12,7 +12,6 @@ export default defineConfig({
     // must be before Vue
     VueRouter({
       logs: true,
-      extensions: ['.vue', '.md'],
       routesFolder: [
         'src/pages',
         {
