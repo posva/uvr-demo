@@ -10,7 +10,10 @@ const route = useRoute('/docs/[lang]/[...pathMatch]')
     <p>Path: {{ route.params.pathMatch }}</p>
     <hr />
     <RouterLink
-      :to="{ name: '/docs/[lang]/', params: { lang: route.params.lang } }"
+      :to="{
+        name: '/docs/[lang]/',
+        params: { lang: route.params.lang },
+      }"
       >Back to <code>/docs/{{ route.params.lang }}</code></RouterLink
     >
   </div>

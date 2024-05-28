@@ -13,7 +13,12 @@ export default defineConfig({
     VueRouter({
       logs: true,
       routesFolder: [
-        'src/pages',
+        {
+          src: 'src/pages',
+          // make sure to exclude nested folders that are handled by other rules
+          // or you will have the same route registered twice
+          exclude: 'src/pages/docs',
+        },
         {
           src: 'src/pages/docs',
           extensions: ['.md', '.vue'],
